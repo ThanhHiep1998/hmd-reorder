@@ -1,0 +1,194 @@
+2022-12-01 10:45:59,236 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application using Java 17.0.4.1 on D2035 with PID 8856 (D:\hmd-reorder\backend\target\classes started by D2035 in D:\hmd-reorder)
+2022-12-01 10:45:59,240 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-12-01 10:46:00,704 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8082 (http)
+2022-12-01 10:46:00,723 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8082"]
+2022-12-01 10:46:00,724 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-12-01 10:46:00,726 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-12-01 10:46:00,819 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-12-01 10:46:00,819 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1505 ms
+2022-12-01 10:46:01,372 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-12-01 10:46:01,577 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8082"]
+2022-12-01 10:46:01,641 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8082 (http) with context path ''
+2022-12-01 10:46:01,651 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 2.847 seconds (JVM running for 3.421)
+2022-12-01 13:45:33,045 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application using Java 17.0.4.1 on D2035 with PID 12840 (D:\hmd-reorder\backend\target\classes started by D2035 in D:\hmd-reorder)
+2022-12-01 13:45:33,057 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-12-01 13:45:34,589 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8082 (http)
+2022-12-01 13:45:34,610 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8082"]
+2022-12-01 13:45:34,611 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-12-01 13:45:34,613 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-12-01 13:45:34,738 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-12-01 13:45:34,739 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1608 ms
+2022-12-01 13:45:35,397 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-12-01 13:45:35,680 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8082"]
+2022-12-01 13:45:35,756 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8082 (http) with context path ''
+2022-12-01 13:45:35,766 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 3.196 seconds (JVM running for 3.833)
+2022-12-01 13:46:38,656 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-01 13:46:38,658 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-12-01 13:46:38,663 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 2 ms
+2022-12-01 13:46:38,791 INFO com.zaxxer.hikari.HikariDataSource [http-nio-8082-exec-2] HikariPool-1 - Starting...
+2022-12-01 13:46:39,138 INFO com.zaxxer.hikari.HikariDataSource [http-nio-8082-exec-2] HikariPool-1 - Start completed.
+2022-12-01 13:46:39,292 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-2]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT  A.*
+		    FROM    T10P_1010 A
+		    WHERE   EMP_NO = '202204'
+              AND    GRP_CD = '3900'
+ {executed in 67 msec}
+2022-12-01 13:46:39,419 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-3]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT DEPT_CD AS GRP_CD , DEPT_NM AS GRP_NM
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 6 msec}
+2022-12-01 13:46:42,246 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-4]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT  EMP_NO , ENM , ENTR_DT
+		    FROM  T10P_1010 
+		   WHERE  GRP_CD = '4700'
+             AND  RSGN_DT = ' ' 
+             AND  RT_ID = '2'
+           ORDER BY POS_CD,EMP_NO
+ {executed in 7 msec}
+2022-12-01 14:21:27,527 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-6]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT DEPT_CD AS GRP_CD , DEPT_NM AS GRP_NM
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 16 msec}
+2022-12-01 14:21:29,979 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-9]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT  EMP_NO , ENM , ENTR_DT
+		    FROM  T10P_1010 
+		   WHERE  GRP_CD = '3900'
+             AND  RSGN_DT = ' ' 
+             AND  RT_ID = '2'
+           ORDER BY POS_CD,EMP_NO
+ {executed in 7 msec}
+2022-12-01 14:35:50,091 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-1]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT DEPT_CD AS GRP_CD , DEPT_NM AS GRP_NM
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 4 msec}
+2022-12-01 14:55:24,670 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-5]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT  EMP_NO , ENM , ENTR_DT
+		    FROM  T10P_1010 
+		   WHERE  GRP_CD = '3100'
+             AND  RSGN_DT = ' ' 
+             AND  RT_ID = '2'
+           ORDER BY POS_CD,EMP_NO
+ {executed in 11 msec}
+2022-12-01 14:55:58,941 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-6]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT  EMP_NO , ENM , ENTR_DT
+		    FROM  T10P_1010 
+		   WHERE  GRP_CD = '3100'
+             AND  RSGN_DT = ' ' 
+             AND  RT_ID = '2'
+           ORDER BY POS_CD,EMP_NO
+ {executed in 6 msec}
+2022-12-01 14:56:36,488 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-9]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT  EMP_NO , ENM , ENTR_DT
+		    FROM  T10P_1010 
+		   WHERE  GRP_CD = '3100'
+             AND  RSGN_DT = ' ' 
+             AND  RT_ID = '2'
+           ORDER BY POS_CD,EMP_NO
+ {executed in 4 msec}
+2022-12-01 14:58:50,897 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-1]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT DEPT_CD AS GRP_CD , DEPT_NM AS GRP_NM
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 5 msec}
+2022-12-01 14:58:53,928 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-3]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT  EMP_NO , ENM , ENTR_DT
+		    FROM  T10P_1010 
+		   WHERE  GRP_CD = '3100'
+             AND  RSGN_DT = ' ' 
+             AND  RT_ID = '2'
+           ORDER BY POS_CD,EMP_NO
+ {executed in 5 msec}
+2022-12-01 14:59:00,399 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-5]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT  EMP_NO , ENM , ENTR_DT
+		    FROM  T10P_1010 
+		   WHERE  GRP_CD = '3100'
+             AND  RSGN_DT = ' ' 
+             AND  RT_ID = '2'
+           ORDER BY POS_CD,EMP_NO
+ {executed in 6 msec}
+2022-12-01 14:59:12,438 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-8]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT  EMP_NO , ENM , ENTR_DT
+		    FROM  T10P_1010 
+		   WHERE  GRP_CD = '3100'
+             AND  RSGN_DT = ' ' 
+             AND  RT_ID = '2'
+           ORDER BY POS_CD,EMP_NO
+ {executed in 7 msec}
+2022-12-01 15:02:59,871 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-7]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT DEPT_CD AS GRP_CD , DEPT_NM AS GRP_NM
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-12-01 15:03:05,806 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-10]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT  EMP_NO , ENM , ENTR_DT
+		    FROM  T10P_1010 
+		   WHERE  GRP_CD = '3100'
+             AND  RSGN_DT = ' ' 
+             AND  RT_ID = '2'
+           ORDER BY POS_CD,EMP_NO
+ {executed in 4 msec}
+2022-12-01 15:03:17,565 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-2]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT DEPT_CD AS GRP_CD , DEPT_NM AS GRP_NM
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 5 msec}
+2022-12-01 15:03:23,974 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-3]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT  EMP_NO , ENM , ENTR_DT
+		    FROM  T10P_1010 
+		   WHERE  GRP_CD = '4600'
+             AND  RSGN_DT = ' ' 
+             AND  RT_ID = '2'
+           ORDER BY POS_CD,EMP_NO
+ {executed in 7 msec}
+2022-12-01 15:04:11,022 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-4]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT DEPT_CD AS GRP_CD , DEPT_NM AS GRP_NM
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-12-01 15:04:15,929 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-6]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT  EMP_NO , ENM , ENTR_DT
+		    FROM  T10P_1010 
+		   WHERE  GRP_CD = '3100'
+             AND  RSGN_DT = ' ' 
+             AND  RT_ID = '2'
+           ORDER BY POS_CD,EMP_NO
+ {executed in 5 msec}
+2022-12-01 15:10:28,792 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-9]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT DEPT_CD AS GRP_CD , DEPT_NM AS GRP_NM
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 3 msec}
+2022-12-01 15:10:33,818 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-10]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT  EMP_NO , ENM , ENTR_DT
+		    FROM  T10P_1010 
+		   WHERE  GRP_CD = '3100'
+             AND  RSGN_DT = ' ' 
+             AND  RT_ID = '2'
+           ORDER BY POS_CD,EMP_NO
+ {executed in 3 msec}
+2022-12-01 15:11:13,001 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-1]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT DEPT_CD AS GRP_CD , DEPT_NM AS GRP_NM
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}

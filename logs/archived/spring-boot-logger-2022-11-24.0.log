@@ -1,0 +1,1865 @@
+2022-11-24 08:32:12,893 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application using Java 17.0.4.1 on D2035 with PID 12168 (D:\hmd-reorder\backend\target\classes started by D2035 in D:\hmd-reorder)
+2022-11-24 08:32:12,898 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-11-24 08:32:14,792 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8082 (http)
+2022-11-24 08:32:14,811 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8082"]
+2022-11-24 08:32:14,815 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-11-24 08:32:14,825 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-11-24 08:32:14,951 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-11-24 08:32:14,952 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1973 ms
+2022-11-24 08:32:16,164 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-24 08:32:16,451 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8082"]
+2022-11-24 08:32:16,536 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8082 (http) with context path ''
+2022-11-24 08:32:16,546 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 4.111 seconds (JVM running for 4.733)
+2022-11-24 08:33:03,840 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-4] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-24 08:33:03,841 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-4] Initializing Servlet 'dispatcherServlet'
+2022-11-24 08:33:03,842 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-4] Completed initialization in 1 ms
+2022-11-24 08:33:03,916 INFO com.zaxxer.hikari.HikariDataSource [http-nio-8082-exec-4] HikariPool-1 - Starting...
+2022-11-24 08:33:04,320 INFO com.zaxxer.hikari.HikariDataSource [http-nio-8082-exec-4] HikariPool-1 - Start completed.
+2022-11-24 08:33:04,462 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-4]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 43 msec}
+2022-11-24 08:45:07,006 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-6]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 16 msec}
+2022-11-24 08:46:01,932 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-1]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 08:47:33,390 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-3]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 08:48:54,927 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-8]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 08:51:21,310 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-4]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 08:51:21,781 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-5]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 08:53:04,510 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-10]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 08:53:09,390 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-1]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 08:53:40,252 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-3]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 5 msec}
+2022-11-24 08:54:26,380 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-8]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 08:54:34,424 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-4]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 3 msec}
+2022-11-24 09:00:00,426 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-6]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 09:00:03,241 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-10]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 09:57:10,591 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-2]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 10 msec}
+2022-11-24 09:57:11,463 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-3]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 09:57:13,655 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-7]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 10:04:50,035 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-9]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+31. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 10:05:27,462 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-5]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+31. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 3 msec}
+2022-11-24 10:09:15,317 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-10]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+31. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 10:12:30,620 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-2]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+31. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 10:12:35,110 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-3]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+31. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 10:14:08,708 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-8]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+31. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 10:21:06,338 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-4]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+31. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 10:21:36,340 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-6]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+31. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 10:22:06,978 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-1]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+31. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 10:22:30,173 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-3]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+31. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 10:22:37,586 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-8]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+31. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 10:48:08,468 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-4]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+41. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 5 msec}
+2022-11-24 10:50:30,509 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-6]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+41. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 10:50:35,287 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-10]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+41. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 11:03:45,575 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-2]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+51. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 5 msec}
+2022-11-24 11:03:47,676 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-3]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+51. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 11:09:24,560 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-8]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+51. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 11:09:58,010 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-9]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+51. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 11:10:01,405 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-4]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+51. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 11:11:43,442 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-6]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+51. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 3 msec}
+2022-11-24 11:12:28,576 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-10]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+51. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 11:12:32,983 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-1]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+51. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 11:13:13,762 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-2]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+51. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 11:13:39,933 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-3]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+51. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 13:23:22,403 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-8]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+91. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 25 msec}
+2022-11-24 13:23:28,109 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-9]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+91. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 4 msec}
+2022-11-24 13:24:47,892 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-5]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+91. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 13:24:48,450 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-6]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+91. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 13:24:52,259 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-1]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+91. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 13:26:03,654 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-3]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+91. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 13:26:30,037 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-8]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+91. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 13:27:09,460 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-4]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+91. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 13:27:09,927 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-5]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+91. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 13:27:13,436 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-10]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+91. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 13:28:14,446 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-2]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+91. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 13:28:18,573 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-3]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+91. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 14:19:16,951 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-8]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+111. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 34 msec}
+2022-11-24 14:19:22,075 ERROR net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-5] 111. PreparedStatement.setNull(1, 1111)
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OraclePreparedStatement.setNullCritical(OraclePreparedStatement.java:4204)
+	at oracle.jdbc.driver.OraclePreparedStatement.setNull(OraclePreparedStatement.java:4192)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.setNull(OraclePreparedStatementWrapper.java:1010)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.setNull(PreparedStatementSpy.java:266)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setNull(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:65)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at jdk.internal.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at jdk.proxy2/jdk.proxy2.$Proxy52.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at jdk.proxy2/jdk.proxy2.$Proxy56.selectReorder(Unknown Source)
+	at com.hmd.reorder.service.ReorderService.selectReorder(ReorderService.java:22)
+	at com.hmd.reorder.controller.ReorderController.selectReorder(ReorderController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2022-11-24 14:19:22,156 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='SHIP_NO', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting null for parameter #1 with JdbcType OTHER . Try setting a different JdbcType for this parameter or a different jdbcTypeForNull configuration property. Cause: java.sql.SQLException: Invalid column index] with root cause
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OraclePreparedStatement.setNullCritical(OraclePreparedStatement.java:4204)
+	at oracle.jdbc.driver.OraclePreparedStatement.setNull(OraclePreparedStatement.java:4192)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.setNull(OraclePreparedStatementWrapper.java:1010)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.setNull(PreparedStatementSpy.java:266)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setNull(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:65)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at jdk.internal.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at jdk.proxy2/jdk.proxy2.$Proxy52.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at jdk.proxy2/jdk.proxy2.$Proxy56.selectReorder(Unknown Source)
+	at com.hmd.reorder.service.ReorderService.selectReorder(ReorderService.java:22)
+	at com.hmd.reorder.controller.ReorderController.selectReorder(ReorderController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2022-11-24 14:23:32,496 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-6]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+111. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 14:23:42,334 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-1]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+111. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 3 msec}
+2022-11-24 14:24:06,047 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-3]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+111. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 1 msec}
+2022-11-24 14:24:11,893 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-8]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+111. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 3 msec}
+2022-11-24 14:24:15,574 ERROR net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-9] 111. PreparedStatement.setNull(1, 1111)
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OraclePreparedStatement.setNullCritical(OraclePreparedStatement.java:4204)
+	at oracle.jdbc.driver.OraclePreparedStatement.setNull(OraclePreparedStatement.java:4192)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.setNull(OraclePreparedStatementWrapper.java:1010)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.setNull(PreparedStatementSpy.java:266)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setNull(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:65)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at jdk.internal.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at jdk.proxy2/jdk.proxy2.$Proxy52.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at jdk.proxy2/jdk.proxy2.$Proxy56.selectReorder(Unknown Source)
+	at com.hmd.reorder.service.ReorderService.selectReorder(ReorderService.java:22)
+	at com.hmd.reorder.controller.ReorderController.selectReorder(ReorderController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2022-11-24 14:24:15,600 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-9] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='SHIP_NO', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting null for parameter #1 with JdbcType OTHER . Try setting a different JdbcType for this parameter or a different jdbcTypeForNull configuration property. Cause: java.sql.SQLException: Invalid column index] with root cause
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OraclePreparedStatement.setNullCritical(OraclePreparedStatement.java:4204)
+	at oracle.jdbc.driver.OraclePreparedStatement.setNull(OraclePreparedStatement.java:4192)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.setNull(OraclePreparedStatementWrapper.java:1010)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.setNull(PreparedStatementSpy.java:266)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setNull(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:65)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at jdk.internal.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at jdk.proxy2/jdk.proxy2.$Proxy52.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at jdk.proxy2/jdk.proxy2.$Proxy56.selectReorder(Unknown Source)
+	at com.hmd.reorder.service.ReorderService.selectReorder(ReorderService.java:22)
+	at com.hmd.reorder.controller.ReorderController.selectReorder(ReorderController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2022-11-24 14:26:52,389 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-4]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+111. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 14:26:58,254 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-6]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+111. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 14:27:00,681 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-10] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.util.List com.hmd.reorder.controller.ReorderController.selectReorder(java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception]
+2022-11-24 14:28:16,197 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application using Java 17.0.4.1 on D2035 with PID 10220 (D:\hmd-reorder\backend\target\classes started by D2035 in D:\hmd-reorder)
+2022-11-24 14:28:16,200 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-11-24 14:28:17,302 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8082 (http)
+2022-11-24 14:28:17,313 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8082"]
+2022-11-24 14:28:17,315 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-11-24 14:28:17,317 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-11-24 14:28:17,397 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-11-24 14:28:17,398 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1156 ms
+2022-11-24 14:28:17,876 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-24 14:28:18,050 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8082"]
+2022-11-24 14:28:18,111 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8082 (http) with context path ''
+2022-11-24 14:28:18,119 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 2.291 seconds (JVM running for 3.599)
+2022-11-24 14:28:36,018 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-24 14:28:36,021 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-11-24 14:28:36,023 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
+2022-11-24 14:28:36,137 INFO com.zaxxer.hikari.HikariDataSource [http-nio-8082-exec-1] HikariPool-1 - Starting...
+2022-11-24 14:28:36,649 INFO com.zaxxer.hikari.HikariDataSource [http-nio-8082-exec-1] HikariPool-1 - Start completed.
+2022-11-24 14:28:36,885 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-1]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 62 msec}
+2022-11-24 14:28:38,809 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-2] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.util.List com.hmd.reorder.controller.ReorderController.selectReorder(java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception]
+2022-11-24 15:13:32,776 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-3]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 7 msec}
+2022-11-24 15:13:39,721 ERROR net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-6] 11. PreparedStatement.setString(1, "")
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OraclePreparedStatement.setFormOfUseInternal(OraclePreparedStatement.java:10137)
+	at oracle.jdbc.driver.OraclePreparedStatement.setFormOfUseInternal(OraclePreparedStatement.java:10118)
+	at oracle.jdbc.driver.OraclePreparedStatement.setString(OraclePreparedStatement.java:4879)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.setString(OraclePreparedStatementWrapper.java:257)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.setString(PreparedStatementSpy.java:565)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setString(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:31)
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	at org.apache.ibatis.type.UnknownTypeHandler.setNonNullParameter(UnknownTypeHandler.java:67)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at jdk.proxy2/jdk.proxy2.$Proxy52.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at jdk.proxy2/jdk.proxy2.$Proxy56.selectReorder(Unknown Source)
+	at com.hmd.reorder.service.ReorderService.selectReorder(ReorderService.java:22)
+	at com.hmd.reorder.controller.ReorderController.selectReorder(ReorderController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2022-11-24 15:13:39,750 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='SHIP_NO', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Invalid column index] with root cause
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OraclePreparedStatement.setFormOfUseInternal(OraclePreparedStatement.java:10137)
+	at oracle.jdbc.driver.OraclePreparedStatement.setFormOfUseInternal(OraclePreparedStatement.java:10118)
+	at oracle.jdbc.driver.OraclePreparedStatement.setString(OraclePreparedStatement.java:4879)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.setString(OraclePreparedStatementWrapper.java:257)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.setString(PreparedStatementSpy.java:565)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setString(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:31)
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	at org.apache.ibatis.type.UnknownTypeHandler.setNonNullParameter(UnknownTypeHandler.java:67)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at jdk.proxy2/jdk.proxy2.$Proxy52.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at jdk.proxy2/jdk.proxy2.$Proxy56.selectReorder(Unknown Source)
+	at com.hmd.reorder.service.ReorderService.selectReorder(ReorderService.java:22)
+	at com.hmd.reorder.controller.ReorderController.selectReorder(ReorderController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2022-11-24 16:15:06,828 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-7]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+31. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 11 msec}
+2022-11-24 16:15:14,313 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-9]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+31. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 8 msec}
+2022-11-24 16:15:37,256 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application using Java 17.0.4.1 on D2035 with PID 9636 (D:\hmd-reorder\backend\target\classes started by D2035 in D:\hmd-reorder)
+2022-11-24 16:15:37,265 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-11-24 16:15:38,798 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8082 (http)
+2022-11-24 16:15:38,822 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8082"]
+2022-11-24 16:15:38,825 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-11-24 16:15:38,829 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-11-24 16:15:38,950 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-11-24 16:15:38,950 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1610 ms
+2022-11-24 16:15:39,625 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-24 16:15:39,908 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8082"]
+2022-11-24 16:15:40,005 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8082 (http) with context path ''
+2022-11-24 16:15:40,020 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 3.199 seconds (JVM running for 3.845)
+2022-11-24 16:16:02,130 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-3] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-24 16:16:02,132 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-3] Initializing Servlet 'dispatcherServlet'
+2022-11-24 16:16:02,134 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-3] Completed initialization in 1 ms
+2022-11-24 16:16:02,203 INFO com.zaxxer.hikari.HikariDataSource [http-nio-8082-exec-3] HikariPool-1 - Starting...
+2022-11-24 16:16:02,515 INFO com.zaxxer.hikari.HikariDataSource [http-nio-8082-exec-3] HikariPool-1 - Start completed.
+2022-11-24 16:16:02,656 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-3]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 51 msec}
+2022-11-24 16:19:26,062 ERROR net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-6] 1. PreparedStatement.setString(1, "")
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OraclePreparedStatement.setFormOfUseInternal(OraclePreparedStatement.java:10137)
+	at oracle.jdbc.driver.OraclePreparedStatement.setFormOfUseInternal(OraclePreparedStatement.java:10118)
+	at oracle.jdbc.driver.OraclePreparedStatement.setString(OraclePreparedStatement.java:4879)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.setString(OraclePreparedStatementWrapper.java:257)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.setString(PreparedStatementSpy.java:565)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setString(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:31)
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	at org.apache.ibatis.type.UnknownTypeHandler.setNonNullParameter(UnknownTypeHandler.java:67)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at jdk.proxy2/jdk.proxy2.$Proxy52.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at jdk.proxy2/jdk.proxy2.$Proxy56.selectReorder(Unknown Source)
+	at com.hmd.reorder.service.ReorderService.selectReorder(ReorderService.java:22)
+	at com.hmd.reorder.controller.ReorderController.selectReorder(ReorderController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2022-11-24 16:19:26,084 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='SHIP_NO', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Invalid column index] with root cause
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OraclePreparedStatement.setFormOfUseInternal(OraclePreparedStatement.java:10137)
+	at oracle.jdbc.driver.OraclePreparedStatement.setFormOfUseInternal(OraclePreparedStatement.java:10118)
+	at oracle.jdbc.driver.OraclePreparedStatement.setString(OraclePreparedStatement.java:4879)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.setString(OraclePreparedStatementWrapper.java:257)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.setString(PreparedStatementSpy.java:565)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setString(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:31)
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	at org.apache.ibatis.type.UnknownTypeHandler.setNonNullParameter(UnknownTypeHandler.java:67)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at jdk.proxy2/jdk.proxy2.$Proxy52.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at jdk.proxy2/jdk.proxy2.$Proxy56.selectReorder(Unknown Source)
+	at com.hmd.reorder.service.ReorderService.selectReorder(ReorderService.java:22)
+	at com.hmd.reorder.controller.ReorderController.selectReorder(ReorderController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2022-11-24 16:29:12,364 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-1]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 3 msec}
+2022-11-24 16:30:38,856 DEBUG net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-5]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. --SELECT 	*
+                --FROM 	PTB_SHIP_BASIC
+                --WHERE 	SHIP_NO LIKE '%21'
+                 --   AND SHIP_CONST_GBN IN ('H1', 'H4')
+                 --   AND CONTRACT = 'Y'
+                  --  AND DOCK NOT IN ('1', '2', '3', '4')
+                  --  AND S_MOTHER_SHIP <> '100521'
+               SELECT DEPT_CD AS SHIP_NO, DEPT_NM AS SHIP_NAME
+                 FROM T10B_DEPT
+                WHERE USE_YN = 'Y'
+                  AND DEPT_CD NOT IN ('3800','4100','9000')
+                ORDER BY DEPT_SORT
+ {executed in 2 msec}
+2022-11-24 16:31:38,018 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-6] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.util.List com.hmd.reorder.controller.ReorderController.selectReorder(java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception]
+2022-11-24 16:32:08,317 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-7] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.util.List com.hmd.reorder.controller.ReorderController.selectReorder(java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception]
+2022-11-24 16:32:14,584 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-9] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.util.List com.hmd.reorder.controller.ReorderController.selectReorder(java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception]
+2022-11-24 16:32:15,455 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-3] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.util.List com.hmd.reorder.controller.ReorderController.selectReorder(java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception]
+2022-11-24 16:34:34,741 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-4] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.util.List com.hmd.reorder.controller.ReorderController.selectReorder(java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception]
+2022-11-24 16:34:49,259 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-6] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.util.List com.hmd.reorder.controller.ReorderController.selectReorder(java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception]
+2022-11-24 16:35:15,120 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-7] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.util.List com.hmd.reorder.controller.ReorderController.selectReorder(java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception]
+2022-11-24 16:35:30,882 ERROR net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator [http-nio-8082-exec-10] 1. PreparedStatement.setNull(1, 1111)
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OraclePreparedStatement.setNullCritical(OraclePreparedStatement.java:4204)
+	at oracle.jdbc.driver.OraclePreparedStatement.setNull(OraclePreparedStatement.java:4192)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.setNull(OraclePreparedStatementWrapper.java:1010)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.setNull(PreparedStatementSpy.java:266)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setNull(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:65)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at jdk.proxy2/jdk.proxy2.$Proxy52.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at jdk.proxy2/jdk.proxy2.$Proxy56.selectReorder(Unknown Source)
+	at com.hmd.reorder.service.ReorderService.selectReorder(ReorderService.java:22)
+	at com.hmd.reorder.controller.ReorderController.selectReorder(ReorderController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2022-11-24 16:35:30,917 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-10] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='SHIP_NO', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting null for parameter #1 with JdbcType OTHER . Try setting a different JdbcType for this parameter or a different jdbcTypeForNull configuration property. Cause: java.sql.SQLException: Invalid column index] with root cause
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OraclePreparedStatement.setNullCritical(OraclePreparedStatement.java:4204)
+	at oracle.jdbc.driver.OraclePreparedStatement.setNull(OraclePreparedStatement.java:4192)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.setNull(OraclePreparedStatementWrapper.java:1010)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.setNull(PreparedStatementSpy.java:266)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setNull(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:65)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at jdk.proxy2/jdk.proxy2.$Proxy52.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at jdk.proxy2/jdk.proxy2.$Proxy56.selectReorder(Unknown Source)
+	at com.hmd.reorder.service.ReorderService.selectReorder(ReorderService.java:22)
+	at com.hmd.reorder.controller.ReorderController.selectReorder(ReorderController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2022-11-24 16:36:11,608 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-3] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.util.List com.hmd.reorder.controller.ReorderController.selectReorder(java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception]
+2022-11-24 16:36:30,073 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-4] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token
+ at [Source: (PushbackInputStream); line: 1, column: 2]]
+2022-11-24 16:36:38,014 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-6] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token
+ at [Source: (PushbackInputStream); line: 1, column: 2]]
+2022-11-24 16:36:40,317 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-7] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token
+ at [Source: (PushbackInputStream); line: 1, column: 2]]
+2022-11-24 16:36:40,902 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-10] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token
+ at [Source: (PushbackInputStream); line: 1, column: 2]]
+2022-11-24 16:36:44,840 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-3] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token
+ at [Source: (PushbackInputStream); line: 1, column: 2]]
+2022-11-24 16:43:33,916 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-4] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token
+ at [Source: (PushbackInputStream); line: 1, column: 2]]
+2022-11-24 16:43:38,101 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-6] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token
+ at [Source: (PushbackInputStream); line: 1, column: 2]]
+2022-11-24 16:44:18,237 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-7] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token
+ at [Source: (PushbackInputStream); line: 1, column: 2]]
+2022-11-24 16:53:04,542 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-10] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token
+ at [Source: (PushbackInputStream); line: 1, column: 2]]
+2022-11-24 16:54:21,653 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-3] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` out of START_ARRAY token
+ at [Source: (PushbackInputStream); line: 1, column: 2]]
